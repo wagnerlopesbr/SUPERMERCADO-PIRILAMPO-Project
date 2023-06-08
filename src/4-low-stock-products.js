@@ -7,7 +7,7 @@ const getLowStockProducts = () => {
   for (let i = 0; i < stockProducts.length; i += 1) {
     product = stockProducts[i];
     if (product.quantityInStock > 0 && product.quantityInStock <= 10) {
-      lowStockProducts.push(`${product.productName}: ${product.quantityInStock} unidades.`);
+      lowStockProducts.push(`${product.productName}: ${product.quantityInStock} unidades`);
     }
   }
   return lowStockProducts;
