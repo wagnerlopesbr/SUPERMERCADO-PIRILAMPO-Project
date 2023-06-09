@@ -10,7 +10,7 @@ const getProductsWithAllergyOrIntoleranceInfo = () => {
       let productsWithAlergyOrIntoleranceInfos = {
         'description': product.description,
         'formattedPrice': `R$ ${product.price.toFixed(2)}`,
-        'allergyOrIntoleranceMessage': `Pode conter: ${product.allergyOrIntolerance.join(" ").toString()}`
+        'allergyOrIntoleranceMessage': `Pode conter: ${product.allergyOrIntolerance.join(" ")}`
       }
       productsWithAorIInfo.push(productsWithAlergyOrIntoleranceInfos);
     }
