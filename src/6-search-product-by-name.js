@@ -1,19 +1,20 @@
 const stockProducts = require('./data.json');
 
-const searchProductByName = () => {
+const searchProductByName = (itemName) => {
   // Desenvolva seu código dentro dessa função...z
-  let product = [];
-  let productsInfo = {};
+  let product;
+  let productInfo = {};
   for (let i = 0; i < stockProducts.length; i += 1) {
     product = stockProducts[i];
-    if (product.productName === stockProducts.productName) {
-      productsInfo = {
-        'description': product[i].description,
-        'formattedPrice': product[i].price,
-      };
+    if (product.productName !== 'undefined' && product.productName === itemName) {
+      productInfo = {
+        'description': product.description,
+        'formattedPrice': `R$ ${product.price.toFixed(2)}`
+      }
+      return productInfo;
     }
   }
-  return productsInfo;
+  return null;
 };
 
 module.exports = { searchProductByName };
