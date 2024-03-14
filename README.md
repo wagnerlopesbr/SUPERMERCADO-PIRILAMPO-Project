@@ -1,4 +1,4 @@
-# Store Manager - Project
+# Supermercado Pirilampo - Project
 
 ### English:
 
